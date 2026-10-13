@@ -1,7 +1,7 @@
 import { Room, Client } from "colyseus";
 import { CampusState, Player } from "./schema/PlayerState.js";
 
-const ANIMATIONS = new Set(["Idle", "Walk", "Run", "Jump"]);
+const ANIMATIONS = new Set(["Idle", "Walk", "Run", "Jump", "Ride"]);
 
 export class CampusRoom extends Room {
   maxClients = 200;
