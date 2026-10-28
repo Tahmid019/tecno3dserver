@@ -70,13 +70,15 @@ export class CampusRoom extends Room {
 
   }
 
-  onJoin(client: Client, options: { name?: string }) {
+  onJoin(client: Client, options: { name?: string, avatar?: string }) {
     this.updateOnlineCount();
     const p = new Player();
     const requestedName = options?.name?.trim().slice(0, 30);
     p.name = requestedName && requestedName.toLowerCase() !== "guest"
       ? requestedName
       : this.generateGuestName();
+    
+    p.avatar = options.avatar ?? "student.glb";
 
 
     this.state.players.set(client.sessionId, p);

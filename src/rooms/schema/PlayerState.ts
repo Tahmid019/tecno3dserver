@@ -5,6 +5,7 @@ export class Player extends Schema {
   @type("number") y = 0;
   @type("number") z = 0;
   @type("string") name = "Guest";
+  @type("string") avatar = "student.glb";
   @type("string") animation = "Idle";
   @type("number") qx = 0;
     @type("number") qy = 0;
